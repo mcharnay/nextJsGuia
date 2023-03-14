@@ -1,0 +1,92 @@
+get statick props > consumir apis
+getserver algo props
+static paths
+
+webpack > empaqueta
+babel > compila
+
+
+//creación de proyecto
+npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+
+//run dev, build o start
+npm run dev
+
+
+File system routing
+
+
+//componentes
+
+Assets, Metadata, y css
+next Link
+next Image
+next Head
+next Script
+next Layout
+
+//Pre-rendering and Data Fetching
+
+Pre-rendering (pre renderización)
+Otorga hydration, con esto, las páginas js son interactivas.
+Nextjs, pre rendea la app denttro de un html estático permitiendo ver la ui de la app sin js corriendo.
+Primero, la app se carga sin js, ocurre hydration; otorgando correr js en el archivo thml estático.
+
+Hay 2 formas de pre renderizar una app:   
+Static Generation y Server-side Rendering.
+
+- Static generation:
+Genera un html en tiempo de construcción (build time).
+Este tipo de render se usa generalmente en páginas de márketing, posteos en blogs, lista de productos e-commerce
+y documentación de ayuda.
+
+Para usar Static generation, hay que importar getStaticProps.
+
+Este tipo de render, es más rápido que el server-side rendering.
+Este tipo de render, puede ejecutarse con, o sin datos.
+
+Static Generation con Data usando getStaticProps
+
+(Una función asíncrona; es aquella que en su promesa devuelve algo siempre (Callback)
+Promesa, es un objeto, es una clase a una función asíncrona. Adjunta funciones callback.
+
+getStaticProps: Se ejecuta en tiempo de build en producción. Dentro de esta función se puede agarrar data de afuera
+y pasárselo a los props hacia la página.
+En modo development, getStaticProps; corre cada vez que se genera un request.
+Esto sirve para agarrar data.
+
+getStaticProps() : Se parsean los archivos markdown (md) quedando así:
+{id: ..., title: ..., date: ... },
+{id: ..., title: ..., date: ... }, 
+
+Se muestra la lista de posts blogs en la página index.
+
+
+///////////////////////////////
+
+-Server-side Rendering
+Este método, genera html en tiempo de solicitud de búsqueda (each request).
+
+*Se puede combinar los tipos de render.
+
+Para usar Server-side rendering, necesitas exportar getServerSideProps.
+
+getServerSideProps:
+Es llamado en tiempo de solicitud (request).
+Context, contiene los parámetros de la llamada del request.
+
+Quedé en Dynamic Routes:
+-Page Path Depends on External Data
+
+
+Dynamic Routes (rutas dinámicas)
+Ruta de página depende de data externa.
+
+
+
+
+
+
+
+
+
